@@ -1,23 +1,31 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Games from './pages/Games';
+import Minigrants from './pages/Minigrants';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <nav className="navbar">
-        <h1>DadBod Studios</h1>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Minigrants</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <main>
-        <h2>Welcome to DadBod Studios</h2>
-        <p>We make claymation shooters and fund wild indie games. Our debut title <strong>Kiln</strong> is coming soon.</p>
-      </main>
-    </div>
+    <Router>
+      <Navbar />
+      <Hero />
+      <div className="container my-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/minigrants" element={<Minigrants />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
