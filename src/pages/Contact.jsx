@@ -34,14 +34,20 @@ const Contact = () => {
   return (
     <Container className="py-5">
       <Row className="justify-content-center">
-        <Col md={8}>
+        <Col xs={12} md={8}>
           <h2 className="mb-4 text-center">Contact Us</h2>
           <p className="text-center mb-4">
             Got a game idea? Want to collaborate? Drop us a message!
           </p>
 
-          {status === "success" && <Alert variant="success">{message}</Alert>}
-          {status === "error" && <Alert variant="danger">{message}</Alert>}
+          {status !== "idle" && (
+            <Alert
+              variant={status === "success" ? "success" : "danger"}
+              aria-live="polite"
+            >
+              {message}
+            </Alert>
+          )}
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="name" className="mb-3">
@@ -76,7 +82,11 @@ const Contact = () => {
             </Form.Group>
 
             <div className="text-center">
-              <Button variant="primary" type="submit" disabled={status === "sending"}>
+              <Button
+                variant="primary"
+                type="submit"
+                disabled={status === "sending"}
+              >
                 {status === "sending" ? "Sending..." : "Send Message"}
               </Button>
             </div>
@@ -88,3 +98,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
