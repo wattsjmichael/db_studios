@@ -20,7 +20,7 @@ export default function About() {
               publish their dream project, we show up, press start, and get to work.
             </p>
             <p>
-              Built in the PNW, powered by coffee, kids' nap schedules, and relentless curiosity.
+              Built in the lentless curiosity.
             </p>
           </Col>
         </Row>
