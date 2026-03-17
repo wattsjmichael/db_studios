@@ -16,9 +16,6 @@ const Home = () => {
           <p className="lead">
             Indie games. DIY spirit. Built with biceps and brain cells.
           </p>
-          <Button variant="primary" href="/games">
-            Check Out Our Games
-          </Button>
         </Col>
       </Row>
     </Container>

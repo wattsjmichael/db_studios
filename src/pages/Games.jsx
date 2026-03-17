@@ -1,32 +1,54 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import kilnPreview from "../images/KilnTitle.png"; // use your actual images
+import sunderPreview from "../images/ProjSunderTitle.png";
 
 const Games = () => {
   return (
-    <Container className="text-center mt-5 mb-5 px-3">
-      <Row>
+    <Container className="py-5 px-3 text-light bg-dark">
+      <Row className="text-center mb-5">
         <Col>
           <h1 className="display-4">🎮 Our Games</h1>
-          <p className="lead">
-            We're in the lab crafting something special.
-          </p>
+          <p className="lead">Two bold visions. One indie mission.</p>
         </Col>
       </Row>
 
-      <Row className="justify-content-center mt-4">
-        <Col xs={12} md={8} lg={6}>
-          <Image
-            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW9xemdxN21zOGkwbDJwbjl2N3RiYXBhcndiNWU5YzI5MTJ3OW9zbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRLGB7eWATEI1Ik/giphy.gif"
-            alt="Coming Soon"
-            fluid
-            rounded
-            loading="lazy"
-            aria-label="Animated lab beaker bubbling"
-          />
-          <h2 className="mt-4">Coming Soon...</h2>
-          <p>
-            Follow us on socials or check back soon for updates on our debut title.
-          </p>
+      <Row className="g-4">
+        <Col md={6}>
+          <Card bg="secondary" text="light" className="h-100 shadow-lg">
+            <Card.Img variant="top" src={kilnPreview} alt="KILN preview" />
+            <Card.Body>
+              <Card.Title>KILN</Card.Title>
+              <Card.Text>
+                A claymation boomer shooter where you battle failed AI art experiments in a rogue lab.
+              </Card.Text>
+              <Link to="/KilnGDD">
+                <Button variant="outline-light">View GDD</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6}>
+          <Card bg="secondary" text="light" className="h-100 shadow-lg">
+            <Card.Img variant="top" src={sunderPreview} alt="Project Sunder preview" />
+            <Card.Body>
+              <Card.Title>Project Sunder</Card.Title>
+              <Card.Text>
+                A story-driven Soulslike RPG that explores grief, memory, and descent into madness.
+              </Card.Text>
+              <Link to="/gdd/sunder">
+                <Button variant="outline-light">View GDD</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row className="mt-5 text-center">
+        <Col>
+          <p className="mt-4">More games coming soon. Stay tuned!</p>
         </Col>
       </Row>
     </Container>

@@ -10,9 +10,7 @@ const Hero = () => {
         <p className="lead animate-fade">
           Indie game publishing with real dev energy — no dad jokes, just action.
         </p>
-        <Button variant="danger" size="lg" className="mt-3 animate-button">
-          Check Out Kiln
-        </Button>
+
       </Container>
     </div>
   );
