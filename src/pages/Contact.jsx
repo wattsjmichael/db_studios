@@ -19,7 +19,7 @@ const Contact = () => {
       body: formData,
     });
 
-    const result = await response.json();
+    await response.json();
 
     if (response.ok) {
       setMessage("Thanks for reaching out! We'll get back to you soon.");
@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <Container className="py-5">
+    <Container className="site-page">
       <Row className="justify-content-center">
         <Col xs={12} md={8}>
           <h2 className="mb-4 text-center">Contact Us</h2>
@@ -83,7 +83,7 @@ const Contact = () => {
 
             <div className="text-center">
               <Button
-                variant="primary"
+                className="site-button-primary"
                 type="submit"
                 disabled={status === "sending"}
               >

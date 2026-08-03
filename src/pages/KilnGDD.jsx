@@ -5,7 +5,7 @@ import './gdd.css';
 
 export default function ExampleGDD() {
   return (
-    <Container className="gdd-section py-5 text-light">
+    <Container className="gdd-section py-5">
       <Row className="mb-4">
         <Col>
           <h1 className="display-4">🎮 KILN: Game Design Document</h1>

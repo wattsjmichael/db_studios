@@ -1,9 +1,15 @@
 .gdd-section {
-  background-color: #111;
-  color: #fff;
+  --page-accent: var(--color-accent-warm);
+  min-height: 70vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .gdd-section h2 {
-  color: #ff9569;
+  color: var(--page-accent);
   margin-top: 1.5rem;
 }
+
+.gdd-section .lead,
+.gdd-section p,
+.gdd-section li { color: var(--color-text-muted); }

@@ -1,3 +1,33 @@
+:root {
+  --color-bg: #08090b;
+  --color-bg-secondary: #0d0f12;
+  --color-surface: #121418;
+  --color-surface-hover: #1e2127;
+  --color-text: #f7f4ef;
+  --color-text-muted: #a9acb4;
+  --color-primary: #f04444;
+  --color-primary-hover: #ff5e5e;
+  --color-accent: #f17b7b;
+  --color-border: #34373e;
+  --color-danger: #ff6b6b;
+  --color-success: #63d69a;
+  --color-on-primary: #ffffff;
+  --color-input: #17191e;
+  --color-accent-warm: #ff9569;
+  --color-primary-rgb: 240, 68, 68;
+  --color-grid-line: rgba(255, 255, 255, .08);
+  --color-primary-deep: #210d10;
+  --color-primary-dark: #340d11;
+  --color-primary-strong: #a51f29;
+  --color-success-surface: #10251b;
+  --color-danger-surface: #2b1114;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,8 +35,86 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background: var(--color-bg);
+  color: var(--color-text);
 }
+
+main {
+  min-height: 70vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a { color: var(--color-accent); }
+a:hover { color: var(--color-primary-hover); }
+
+.site-page {
+  min-height: 70vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.site-page .lead,
+.site-page .text-muted,
+.site-page .card-text { color: var(--color-text-muted) !important; }
+
+.site-nav,
+.site-footer { background: var(--color-bg-secondary) !important; color: var(--color-text); }
+
+.site-nav { border-bottom: 1px solid var(--color-border); }
+.site-footer { border-top: 1px solid var(--color-border); }
+.site-nav .navbar-brand, .site-nav .nav-link { color: var(--color-text); }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: var(--color-primary-hover); }
+.site-nav .navbar-brand span { color: var(--color-primary) !important; }
+
+.site-card {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.site-card:hover { background: var(--color-surface-hover); border-color: var(--color-primary); }
+
+.btn.site-button-primary {
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn.site-button-primary:hover,
+.btn.site-button-primary:focus-visible {
+  color: var(--color-on-primary);
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+.btn.site-button-secondary {
+  color: var(--color-text);
+  background: transparent;
+  border-color: var(--color-border);
+}
+.btn.site-button-secondary:hover,
+.btn.site-button-secondary:focus-visible {
+  color: var(--color-bg);
+  background: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.site-page .form-control {
+  color: var(--color-text);
+  background: var(--color-input);
+  border-color: var(--color-border);
+}
+.site-page .form-control::placeholder { color: var(--color-text-muted); opacity: .8; }
+.site-page .form-control:focus {
+  color: var(--color-text);
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 .25rem rgba(var(--color-primary-rgb), .2);
+}
+
+.site-page .alert-success { color: var(--color-success); background: var(--color-success-surface); border-color: var(--color-success); }
+.site-page .alert-danger { color: var(--color-danger); background: var(--color-danger-surface); border-color: var(--color-danger); }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -26,7 +26,7 @@ const MiniGrants = () => {
   };
 
   return (
-    <Container className="mt-5 mb-5">
+    <Container className="site-page">
       <Row className="mb-4">
         <Col>
           <h1 className="text-center">🎮 DadBod MiniGrants</h1>
@@ -80,7 +80,7 @@ const MiniGrants = () => {
               </Form.Group>
 
               <div className="d-grid">
-                <Button type="submit" variant="primary">
+                <Button type="submit" className="site-button-primary">
                   Submit Application
                 </Button>
               </div>

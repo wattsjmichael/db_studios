@@ -1,17 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Worlds() {
   return (
-    <div className="text-center">
+    <div className="site-page container text-center">
       <h1 className="mb-4">🌍 Horizon Worlds</h1>
-      <p className="lead text-muted">
+      <p className="lead">
         At Dadbod Studios, we’re building dad-vibe VR mini-games and social experiences inside Horizon Worlds.
       </p>
 
       <div className="row mt-5">
         <div className="col-md-4 mb-4">
-          <div className="card h-100 shadow-sm">
+          <div className="card site-card h-100 shadow-sm">
             <div className="card-body">
               <h5 className="card-title">🗑️ Trash Pickup Challenge</h5>
               <p className="card-text">
@@ -24,7 +23,7 @@ export default function Worlds() {
 
 
 <div className="col-md-4 mb-4">
-  <div className="card h-100 shadow-sm">
+  <div className="card site-card h-100 shadow-sm">
     <div className="card-body d-flex flex-column">
       <h5 className="card-title">⏫ Time Climb</h5>
       <p className="card-text">
@@ -36,7 +35,7 @@ export default function Worlds() {
           href="https://horizon.meta.com/world/10101872243361176/?locale=en_US"  // 🔗 replace with actual link
           target="_blank" 
           rel="noopener noreferrer" 
-          className="btn btn-primary"
+          className="btn site-button-primary"
         >
           Go!!!
         </a>
@@ -49,7 +48,7 @@ export default function Worlds() {
 
 
         <div className="col-md-4 mb-4">
-          <div className="card h-100 shadow-sm">
+          <div className="card site-card h-100 shadow-sm">
             <div className="card-body">
               <h5 className="card-title">🎮 Dadbod Worlds</h5>
               <p className="card-text">

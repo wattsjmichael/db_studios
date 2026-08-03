@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './Hero.css';
 
 const Hero = () => {
   return (
-    <div className="hero-section text-center text-light d-flex align-items-center justify-content-center">
+    <div className="hero-section text-center d-flex align-items-center justify-content-center">
       <Container>
         <h1 className="display-3 animate-pop">DadBod Studios</h1>
         <p className="lead animate-fade">

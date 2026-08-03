@@ -6,7 +6,7 @@ import sunderPreview from "../images/ProjSunderTitle.png";
 
 const Games = () => {
   return (
-    <Container className="py-5 px-3 text-light bg-dark">
+    <Container className="site-page px-3">
       <Row className="text-center mb-5">
         <Col>
           <h1 className="display-4">🎮 Our Games</h1>
@@ -16,7 +16,7 @@ const Games = () => {
 
       <Row className="g-4">
         <Col md={6}>
-          <Card bg="secondary" text="light" className="h-100 shadow-lg">
+          <Card className="site-card h-100 shadow-lg">
             <Card.Img variant="top" src={kilnPreview} alt="KILN preview" />
             <Card.Body>
               <Card.Title>KILN</Card.Title>
@@ -24,14 +24,14 @@ const Games = () => {
                 A claymation boomer shooter where you battle failed AI art experiments in a rogue lab.
               </Card.Text>
               <Link to="/KilnGDD">
-                <Button variant="outline-light">View GDD</Button>
+                <Button className="site-button-secondary">View GDD</Button>
               </Link>
             </Card.Body>
           </Card>
         </Col>
 
         <Col md={6}>
-          <Card bg="secondary" text="light" className="h-100 shadow-lg">
+          <Card className="site-card h-100 shadow-lg">
             <Card.Img variant="top" src={sunderPreview} alt="Project Sunder preview" />
             <Card.Body>
               <Card.Title>Project Sunder</Card.Title>
@@ -39,7 +39,7 @@ const Games = () => {
                 A story-driven Soulslike RPG that explores grief, memory, and descent into madness.
               </Card.Text>
               <Link to="/gdd/sunder">
-                <Button variant="outline-light">View GDD</Button>
+                <Button className="site-button-secondary">View GDD</Button>
               </Link>
             </Card.Body>
           </Card>

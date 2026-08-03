@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Hero from './components/Hero';
 
 import Home from './pages/Home';
 import Worlds from './pages/Worlds'
@@ -20,8 +19,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Hero />
-      <div className="container my-5">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/worlds" element={<Worlds />} /> 
@@ -32,7 +30,7 @@ function App() {
           <Route path="/gdd/kiln" element={<KilnGDD />} />
           <Route path="/gdd/sunder" element={<ProjectSunderGDD />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </Router>
   );

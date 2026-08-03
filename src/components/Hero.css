@@ -1,7 +1,7 @@
 .hero-section {
   height: 15vh;
-  background-color: #1a1a1a;
-  background-image: linear-gradient(to bottom right, #111, #222);
+  background-color: var(--color-bg-secondary);
+  background-image: linear-gradient(to bottom right, var(--color-bg), var(--color-surface-hover));
   padding: 40px 20px;
   text-align: center;
 }
