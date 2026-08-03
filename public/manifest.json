@@ -1,8 +1,8 @@
 {
-  "short_name": "DADBOD Studios",
-  "name": "DADBOD Studios",
-  "start_url": ".",
+  "short_name": "Project Redbox",
+  "name": "Dadbod Studios | Project Redbox",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#08090b",
+  "background_color": "#08090b"
 }
